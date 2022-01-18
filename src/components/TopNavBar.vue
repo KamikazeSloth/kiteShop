@@ -1,10 +1,8 @@
 <template>
     <div>
-        <TopNavBarLink src='hit' text='första länken'>
-        </TopNavBarLink>
-        
-        <TopNavBarLink src='dit' text='andra länken'>
-        </TopNavBarLink>
+        <TopNavBarLink src='/' text='Home' />
+        <TopNavBarLink src='contact' text='Kontakta oss' />
+        <TopNavBarLink src='kites' text='Kites' />
     </div>
 </template>
 

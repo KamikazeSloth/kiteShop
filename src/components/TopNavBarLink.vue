@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <router-link to='src'>{{ text }}</router-link>
+    <div class="link">
+        <router-link :to="{ path: src }">{{ text }}</router-link>
     </div>
 </template>
 
@@ -17,5 +17,8 @@ export default {
 
 <style scoped>
 
+.link {
+  text-transform: uppercase;
+}
 
 </style>

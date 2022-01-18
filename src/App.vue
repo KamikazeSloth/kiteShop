@@ -1,12 +1,25 @@
 <template>
   <div id="nav">
+    <TopNavBar></TopNavBar>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </div>
   <router-view/>
 </template>
 
+<script>
+  import TopNavBar from './components/TopNavBar.vue'
+
+  export default {
+    components: {
+      TopNavBar
+    }
+  }
+</script>
+
+
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

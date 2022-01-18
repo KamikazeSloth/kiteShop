@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="barContainer">
         <TopNavBarLink src='/' text='Home' />
         <TopNavBarLink src='contact' text='Kontakta oss' />
         <TopNavBarLink src='kites' text='Kites' />
@@ -18,6 +18,11 @@ export default {
 </script>
 
 <style scoped>
+
+.barContainer {
+  display: flex;
+  flex-direction: row;
+}
 
 
 </style>

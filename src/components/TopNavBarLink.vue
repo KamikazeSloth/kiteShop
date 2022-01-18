@@ -1,7 +1,5 @@
 <template>
-    <div class="link">
-        <router-link :to="{ path: src }">{{ text }}</router-link>
-    </div>
+  <router-link class="link" :to="{ path: src }">{{ text }}</router-link>
 </template>
 
 <script>
@@ -19,6 +17,11 @@ export default {
 
 .link {
   text-transform: uppercase;
+  padding: 16px;
+}
+
+.link:hover {
+  background-color: blue
 }
 
 </style>

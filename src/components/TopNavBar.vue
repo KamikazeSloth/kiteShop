@@ -1,8 +1,13 @@
 <template>
     <div class="barContainer">
+      <div>
         <TopNavBarLink src='/' text='Home' />
         <TopNavBarLink src='contact' text='Kontakta oss' />
         <TopNavBarLink src='kites' text='Kites' />
+      </div>
+      <div>
+        cart
+      </div>
     </div>
 </template>
 
@@ -22,6 +27,9 @@ export default {
 .barContainer {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
 }
 
 

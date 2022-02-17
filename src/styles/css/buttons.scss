@@ -1,0 +1,14 @@
+@use 'theme';
+
+@mixin buttonMixin($buttonTheme: green, $test) {
+    color: $buttonTheme;
+    border: none;
+    height: 48px;
+    width: fit-content;
+    padding: 0 16px;
+    background-color: $test;
+  }
+
+  .buttonGreen {
+    @include buttonMixin($buttonTheme: red, $test: blue);
+  }

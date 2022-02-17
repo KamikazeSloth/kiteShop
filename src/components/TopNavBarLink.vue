@@ -18,10 +18,12 @@ export default {
 .link {
   text-transform: uppercase;
   padding: 16px;
+  text-decoration: none;
+  font-family: 'RobotoRegular';
 }
 
 .link:hover {
-  background-color: blue
+  background-color: rgba(0, 0, 70, 0.212)
 }
 
 </style>

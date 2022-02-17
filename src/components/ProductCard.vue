@@ -4,12 +4,14 @@
   <div class="card">
     <div>{{ name }}</div>
     <div>{{ brand }}</div>
-    <button>köp</button>
+    <Button></Button>
   </div>
 </template>
 
 <script>
+import Button from './Button.vue';
 export default {
+  components: { Button },
   name: "ProductCard",
   props: {
     name: String,

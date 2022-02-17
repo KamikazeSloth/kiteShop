@@ -18,5 +18,20 @@
 </script>
 
 <style>
-
+@font-face {
+  font-family: "RobotoBold";
+    src: url('~@/styles/fonts/Roboto-Bold.ttf');
+}
+@font-face {
+  font-family: "RobotoMedium";
+    src: url('~@/styles/fonts/Roboto-Medium.ttf');
+}
+@font-face {
+  font-family: "RobotoRegular";
+    src: url('~@/styles/fonts/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: "RobotoThin";
+    src: url('~@/styles/fonts/Roboto-Thin.ttf');
+}
 </style>

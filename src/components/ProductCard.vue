@@ -4,18 +4,31 @@
   <div class="card">
     <div>{{ name }}</div>
     <div>{{ brand }}</div>
-    <Button></Button>
+    <div>{{ count }}</div>
+    <Button @click="asd" text="beställ" />
   </div>
 </template>
 
 <script>
-import Button from './Button.vue';
+import Button from "./Button.vue";
+import { store } from "../store/store"
+
 export default {
   components: { Button },
   name: "ProductCard",
   props: {
     name: String,
     brand: String,
+  },
+  computed: {
+    count() {
+      return store.state.count;
+    },
+  },
+  methods: {
+    asd: function () {
+      console.log("asd");
+    },
   },
 };
 </script>

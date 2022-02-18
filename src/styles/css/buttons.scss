@@ -1,14 +1,22 @@
 @use 'theme';
 
-@mixin buttonMixin($buttonTheme: green, $test) {
-    color: $buttonTheme;
+@mixin buttonMixin($color, $bgColor) {
+    color: $color;
     border: none;
     height: 48px;
     width: fit-content;
+    min-width: 120px;
     padding: 0 16px;
-    background-color: $test;
+    background-color: $bgColor;
+    border-radius: 8px;
+    font-family: theme.$fontBold;
+    text-transform: uppercase;
   }
 
-  .buttonGreen {
-    @include buttonMixin($buttonTheme: red, $test: blue);
+  .buttonBuy {
+    @include buttonMixin($color: theme.$blue7, $bgColor: theme.$blue1);
+
+    &:hover {
+        cursor: pointer;
+    }
   }

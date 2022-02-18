@@ -1,7 +1,7 @@
 
 
 <template>
-    <button class="buttonGreen">asd</button>
+    <button onClick="onClick" class="buttonBuy">{{ text }}</button>
 </template>
 
 <script>

@@ -2,9 +2,9 @@
 
 <template>
   <div class="card">
-    <div>{{ name }}</div>
-    <div>{{ brand }}</div>
-    <div>{{ count }}</div>
+    <div class="label">{{ name }}</div>
+    <div class="label">{{ brand }}</div>
+    <div class="label">{{ count }}</div>
     <Button @click="asd" text="beställ" />
   </div>
 </template>
@@ -33,7 +33,11 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+
+@import "../styles/css/theme.scss";
+@import "../styles/css/typography.scss";
+
 .card {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
@@ -42,5 +46,6 @@ export default {
   height: 258px;
   justify-content: space-evenly;
   border-radius: 8px;
+  background-color: white;
 }
 </style>

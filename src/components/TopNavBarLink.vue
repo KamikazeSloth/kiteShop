@@ -13,13 +13,17 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+
+@import "../styles/css/theme.scss";
 
 .link {
   text-transform: uppercase;
   padding: 16px;
   text-decoration: none;
-  font-family: 'RobotoRegular';
+  font-family: $fontMedium;
+  font-size: $font3;
+  color: white;
 }
 
 .link:hover {

@@ -1,0 +1,32 @@
+@use 'theme';
+
+@mixin typographyMixin($color, $fontFamily, $size) {
+    color: $color;
+    font-family: theme.$fontBold;
+    text-transform: uppercase;
+  }
+
+  .heading {
+    @include typographyMixin(
+        $color: theme.$blue1,
+        $fontFamily: theme.$fontBold,
+        $size: theme.$font4);
+  }
+  .paragraph {
+    @include typographyMixin(
+        $color: theme.$blue1,
+        $fontFamily: theme.$fontRegular,
+        $size: theme.$font1);
+  }
+  .label {
+    @include typographyMixin(
+        $color: theme.$blue1,
+        $fontFamily: theme.$fontMedium,
+        $size: theme.$font2);
+  }
+  .attention {
+    @include typographyMixin(
+        $color: theme.$blue1,
+        $fontFamily: theme.$fontMedium,
+        $size: theme.$font3);
+  }

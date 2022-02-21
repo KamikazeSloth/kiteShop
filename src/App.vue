@@ -1,37 +1,36 @@
 <template>
-  <Body>
-    <TopNavBar></TopNavBar>
-    <router-view/>
-  </Body>
+  <TopNavBar></TopNavBar>
+  <router-view />
+  <Footer />
 </template>
 
 <script>
-  import TopNavBar from './components/TopNavBar.vue'
-  import Body from './components/Body.vue'
+import TopNavBar from "./components/TopNavBar.vue";
+import Footer from "./components/Footer.vue";
 
-  export default {
-    components: {
-      TopNavBar,
-      Body
-    }
-  }
+export default {
+  components: {
+    TopNavBar,
+    Footer
+  },
+};
 </script>
 
 <style>
 @font-face {
   font-family: "RobotoBold";
-    src: url('~@/styles/fonts/Roboto-Bold.ttf');
+  src: url("~@/styles/fonts/Roboto-Bold.ttf");
 }
 @font-face {
   font-family: "RobotoMedium";
-    src: url('~@/styles/fonts/Roboto-Medium.ttf');
+  src: url("~@/styles/fonts/Roboto-Medium.ttf");
 }
 @font-face {
   font-family: "RobotoRegular";
-    src: url('~@/styles/fonts/Roboto-Regular.ttf');
+  src: url("~@/styles/fonts/Roboto-Regular.ttf");
 }
 @font-face {
   font-family: "RobotoThin";
-    src: url('~@/styles/fonts/Roboto-Thin.ttf');
+  src: url("~@/styles/fonts/Roboto-Thin.ttf");
 }
 </style>

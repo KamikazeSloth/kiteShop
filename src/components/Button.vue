@@ -1,7 +1,7 @@
 
 
 <template>
-    <button onClick="onClick" class="buttonBuy">{{ text }}</button>
+    <button @click="onClick" class="buttonBuy">{{ text }}</button>
 </template>
 
 <script>
@@ -9,7 +9,7 @@ export default {
   name: "Button",
   props: {
     text: String,
-    onClick: Function,
+    onClick: { type: Function }
   },
 };
 </script>

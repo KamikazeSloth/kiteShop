@@ -1,15 +1,18 @@
-
 import { createStore } from 'vuex'
 
+// Create a new store instance.
 export const store = createStore({
-    state () {
-      return {
-        count: 1337
-      }
-    },
-    mutations: {
-      increment (state) {
-        state.count++
-      }
+  state () {
+    return {
+      products: []
     }
-  })
+  },
+  mutations: {
+    addProductToCart (state, newProduct) {
+      state.products.push(newProduct)
+    },
+    removeProductFromCart (state, index) {
+      console.log(state.products.splice(index, 1));
+    }
+  }
+})

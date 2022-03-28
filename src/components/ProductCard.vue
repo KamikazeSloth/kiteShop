@@ -4,8 +4,7 @@
   <div class="card">
     <div class="label">{{ name }}</div>
     <div class="label">{{ brand }}</div>
-    <div class="label">{{ count }}</div>
-    <Button @click="asd" text="beställ" />
+    <Button :onClick="onClick" text="beställ" />
   </div>
 </template>
 
@@ -19,17 +18,8 @@ export default {
   props: {
     name: String,
     brand: String,
-  },
-  computed: {
-    count() {
-      return store.state.count;
-    },
-  },
-  methods: {
-    asd: function () {
-      console.log("asd");
-    },
-  },
+    onClick: { type: Function }
+  }
 };
 </script>
 

@@ -1,17 +1,21 @@
 <template>
   <TopNavBar></TopNavBar>
-  <router-view />
+  <UniversalPadding>
+    <router-view />
+  </UniversalPadding>
   <Footer />
 </template>
 
 <script>
 import TopNavBar from "./components/TopNavBar.vue";
+import UniversalPadding from "./components/UniversalPadding.vue";
 import Footer from "./components/Footer.vue";
 
 export default {
   components: {
     TopNavBar,
-    Footer
+    Footer,
+    UniversalPadding
   },
 };
 </script>

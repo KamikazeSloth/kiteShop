@@ -4,18 +4,18 @@
     <p class="paragraph">vi säljer kites från slingshot och även lokala märken som är av minst lika hög kvalitet</p>
     <div v-if="isLoading">...loading</div>
     <ProductContainer class="productContainer">
-      <ProductCard
-        v-for="kite in kites"
+      <ProductCard v-for="kite in kites" 
         :key="kite.id"
-        :brand="kite.model"
-        :name="kite.brand"
+        :onClick="addToCart.bind(null, kite.model)"
+        :name="kite.model"
+        :brand="kite.brand"
       />
     </ProductContainer>
   </div>
 </template>
-
 <script>
 import ProductCard from "../components/ProductCard.vue";
+import { store } from "../store/store"
 
 export default {
   name: "Kites",
@@ -28,14 +28,37 @@ export default {
       isLoading: true,
     };
   },
+  methods: {
+    addToCart: function (id) {
+    console.log("id", id)
+    store.commit('addProductToCart', id)
+    },
+  },
   mounted() {
-    fetch("http://localhost:3000/kites")
-      .then((response) => response.json())
-      .then((json) => {
+    // fetch("http://localhost:3000/kites")
+    //   .then((response) => response.json())
+    //   .then((json) => {
+        const json = [
+          {
+            id: '123',
+            brand: 'Slingshot',
+            model: 'RPM'
+          },
+          {
+            id: '456',
+            brand: 'Slingshot',
+            model: 'Fuel'
+          },
+          {
+            id: '890',
+            brand: 'Slingshot',
+            model: 'Raptor'
+          }
+]
         this.kites = json;
         this.isLoading = false;
-      })
-      .catch((e) => console.log("error", e));
+      // })
+      // .catch((e) => console.log("error", e));
   },
 };
 </script>

@@ -4,13 +4,12 @@
   <div class="card">
     <div class="label">{{ name }}</div>
     <div class="label">{{ brand }}</div>
-    <Button :onClick="onClick" text="beställ" />
+    <Button styleType="buttonBuy" :onClick="onClick" text="beställ" />
   </div>
 </template>
 
 <script>
 import Button from "./Button.vue";
-import { store } from "../store/store"
 
 export default {
   components: { Button },
@@ -24,9 +23,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-@import "../styles/css/theme.scss";
-@import "../styles/css/typography.scss";
 
 .card {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

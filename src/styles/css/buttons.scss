@@ -10,7 +10,11 @@
     background-color: $bgColor;
     border-radius: 8px;
     font-family: theme.$fontBold;
+    display: flex;
     text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
   }
 
   .buttonBuy {

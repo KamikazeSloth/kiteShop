@@ -26,11 +26,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../styles/css/theme.scss";
 
 .barContainer {
   display: flex;
   flex-direction: row;
+  width: 100vw;
   justify-content: space-between;
   align-items: center;
   height: 72px;

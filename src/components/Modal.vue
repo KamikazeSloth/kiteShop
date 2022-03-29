@@ -4,7 +4,9 @@
   <div v-if="this.modalIsActive" class="overlay">
     <div class="container">
       <div class="buttonContainer">
-        <button @click="closeModal" class="closeButton">X</button>
+        <button @click="closeModal" class="closeButton">
+          <img src="../icons/cross.svg" alt="cross" />
+        </button>
       </div>
       <slot />
     </div>
@@ -33,9 +35,7 @@ export default {
   },
   watch: {
     isActive: function () {
-      if (this.isActive) {
-        this.modalIsActive = this.isActive;
-      }
+      this.modalIsActive = this.isActive
     },
   },
   computed: {
@@ -47,7 +47,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/css/theme.scss";
 
 .overlay {
   display: flex;

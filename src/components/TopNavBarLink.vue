@@ -15,8 +15,6 @@ export default {
 
 <style scoped lang="scss">
 
-@import "../styles/css/theme.scss";
-
 .link {
   text-transform: uppercase;
   padding: 16px;

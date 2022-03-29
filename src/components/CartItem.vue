@@ -1,9 +1,9 @@
 
 
 <template>
-  <div class="container">
+  <div class="container label">
     <div>
-      {{ product }}
+      {{ product.model }}
     </div>
     <button @click="removeFromCart" class="buttonContainer">
       <img src="../icons/trash.svg" alt="trashcan" />
@@ -17,19 +17,19 @@ import { store } from "../store/store";
 export default {
   name: "CartItem",
   props: {
-    product: String,
+    product: Object,
     index: Number
   },
   methods: {
     removeFromCart: function () {
-        // console.log("called with: ", props)
         store.commit('removeProductFromCart', this.index)
     }
   }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+
 .container {
     display: flex;
     flex-direction: row;

@@ -6,7 +6,7 @@
     <ProductContainer class="productContainer">
       <ProductCard v-for="kite in kites" 
         :key="kite.id"
-        :onClick="addToCart.bind(null, kite.model)"
+        :onClick="addToCart.bind(null, kite)"
         :name="kite.model"
         :brand="kite.brand"
       />
@@ -29,9 +29,8 @@ export default {
     };
   },
   methods: {
-    addToCart: function (id) {
-    console.log("id", id)
-    store.commit('addProductToCart', id)
+    addToCart: function (product) {
+    store.commit('addProductToCart', product)
     },
   },
   mounted() {
@@ -64,7 +63,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../styles/css/typography.scss";
 
 .productContainer {
   display: grid;

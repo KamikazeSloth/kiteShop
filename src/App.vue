@@ -20,7 +20,8 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+
 @font-face {
   font-family: "RobotoBold";
   src: url("~@/styles/fonts/Roboto-Bold.ttf");

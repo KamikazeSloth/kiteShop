@@ -12,7 +12,7 @@ export const store = createStore({
       state.products.push(newProduct)
     },
     removeProductFromCart (state, index) {
-      console.log(state.products.splice(index, 1));
+      state.products.splice(index, 1)
     }
   }
 })

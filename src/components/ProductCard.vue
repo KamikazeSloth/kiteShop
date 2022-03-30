@@ -4,7 +4,7 @@
   <div class="card">
     <div class="label">{{ name }}</div>
     <div class="label">{{ brand }}</div>
-    <Button styleType="buttonBuy" :onClick="onClick" text="beställ" />
+    <Button class="buttonBuy" :onClick="onClick" text="beställ" />
   </div>
 </template>
 

@@ -5,7 +5,9 @@
     <button class="icon" @click="showCart">
       <img src="../icons/cart.svg" alt="cart" />
       <div class="cartNumberContainer">
-        <span class="cartNumber label" v-if="this.products.length > 0">{{ this.products.length }}</span>
+        <span class="cartNumber label" v-if="this.products.length > 0">
+          {{ this.products.length }}
+        </span>
       </div>
     </button>
     <Modal @clicked="onClickChild" :isActive="this.modalIsActive">
@@ -20,7 +22,12 @@
         Din varukorg är tom
       </div>
       <div class="buttonContainer">
-        <Button :onClick="closeCart" styleType="buttonBuy" text="till kassan"/>
+        <Button
+          :isDisabled="!this.checkoutIsEnabled"
+          :onClick="closeCart"
+          class="buttonBuy"
+          text="till kassan"
+        />
       </div>
     </Modal>
   </div>
@@ -36,14 +43,15 @@ export default {
   components: {
     Modal,
     CartItem,
-    Button
+    Button,
   },
   name: "Cart",
   props: {},
   data: function () {
     return {
       modalIsActive: false,
-      groupedProducts: Array
+      testData: 0,
+      checkoutIsEnabled: false,
     };
   },
   methods: {
@@ -52,7 +60,7 @@ export default {
     },
     closeCart: function () {
       this.modalIsActive = false;
-      this.$router.push('/kassa')
+      this.$router.push("/kassa");
     },
     checkoutCart: function () {
       console.log("checkout cart!");
@@ -64,6 +72,18 @@ export default {
   computed: {
     products() {
       return store.state.products;
+    },
+  },
+  watch: {
+    products: {
+      handler() {
+        if (this.products.length > 0) {
+          this.checkoutIsEnabled = true;
+        } else {
+          this.checkoutIsEnabled = false;
+        }
+      },
+      deep: true,
     },
   },
 };

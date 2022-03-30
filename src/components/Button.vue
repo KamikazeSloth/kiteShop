@@ -1,7 +1,7 @@
 
 
 <template>
-  <button @click="onClick" :class="styleType">{{ text }}</button>
+  <button :disabled="isDisabled" @click="onClick" :class="{ isDisabled: isDisabled }">{{ text }}</button>
 </template>
 
 <script>
@@ -9,8 +9,8 @@ export default {
   name: "Button",
   props: {
     text: String,
-    styleType: String,
     onClick: { type: Function },
+    isDisabled: Boolean
   },
 };
 </script>

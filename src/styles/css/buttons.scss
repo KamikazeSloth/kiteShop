@@ -24,3 +24,11 @@
         cursor: pointer;
     }
   }
+
+  .isDisabled {
+    opacity: 0.5;
+  }
+
+  .isDisabled:hover {
+    cursor: default;
+  }

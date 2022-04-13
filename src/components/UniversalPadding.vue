@@ -17,8 +17,10 @@ export default {
 
 .universalPadding {
     max-width: 1440px;
-    min-width: 1440px;
-    margin: 0 auto;
+    
+    @include mediaQueryDesktop {
+        margin: 0 128px;
+    }
 }
 
 </style>

@@ -15,3 +15,15 @@ $font1: 12px;
 $font2: 18px;
 $font3: 24px;
 $font4: 32px;
+
+@mixin mediaQueryPad {
+    @media (min-width: 420px) { @content; }
+  }
+
+@mixin mediaQueryDesktop {
+    @media (min-width: 992px) { @content; }
+}
+
+* {
+    box-sizing: border-box;
+}

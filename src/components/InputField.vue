@@ -1,7 +1,13 @@
 <template>
   <legend class="fieldContainer">
     <label class="" :for="id">{{ labelText }}</label>
-    <input @input="validate" class="inputField" :id="id" v-model="value" />
+    <input 
+      @input="validate" 
+      class="inputField" 
+      :id="id" 
+      v-model="value" 
+      :maxlength="maxLength"
+      :minlength="minLength"/>
     <div v-if="!isValid">felmeddelande</div>
     <div v-else>korrekt värde!</div>
   </legend>
@@ -14,6 +20,8 @@ export default {
     labelText: String,
     id: String,
     validation: RegExp,
+    maxLength: Number,
+    minLength: Number
   },
   data() {
     return {

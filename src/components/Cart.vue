@@ -13,12 +13,13 @@
     <Modal @clicked="onClickChild" :isActive="this.modalIsActive">
       <h1 class="heading">Din varukorg</h1>
       <CartItem
-        v-for="(product, index) in products"
+        v-for="(productName, index) in Object.keys(categorizedProducts)"
         :key="index"
         :index="index"
-        :product="product"
+        :product="productName"
+        :amountPerProduct="categorizedProducts[productName].length"
       />
-      <div class="attention" v-if="this.products.length === 0">
+      <div class="" v-if="this.products.length === 0">
         Din varukorg är tom
       </div>
       <div class="buttonContainer">
@@ -63,7 +64,7 @@ export default {
       this.$router.push("/kassa");
     },
     checkoutCart: function () {
-      console.log("checkout cart!");
+
     },
     onClickChild(value) {
       this.modalIsActive = value;
@@ -71,8 +72,12 @@ export default {
   },
   computed: {
     products() {
-      return store.state.products;
+      return store.getters.allProducts;
     },
+    categorizedProducts() {
+      console.log("hejhej")
+      return store.getters.categorizedProducts
+    }
   },
   watch: {
     products: {

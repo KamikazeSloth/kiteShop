@@ -2,15 +2,16 @@
 
 @mixin typographyMixin($color, $fontFamily, $size) {
     color: $color;
-    font-family: theme.$fontBold;
+    font-family: $fontFamily;
     text-transform: uppercase;
+    font-size: $size;
   }
 
   .heading {
     @include typographyMixin(
-        $color: theme.$blue2,
+        $color: $blue2,
         $fontFamily: theme.$fontBold,
-        $size: theme.$font4);
+        $size: theme.$font3);
   }
   .paragraph {
     @include typographyMixin(
@@ -22,11 +23,11 @@
     @include typographyMixin(
         $color: theme.$blue2,
         $fontFamily: theme.$fontMedium,
-        $size: theme.$font2);
+        $size: theme.$font1);
   }
   .attention {
     @include typographyMixin(
         $color: theme.$blue2,
         $fontFamily: theme.$fontMedium,
-        $size: theme.$font3);
+        $size: theme.$font1);
   }

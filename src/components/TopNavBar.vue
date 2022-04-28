@@ -36,6 +36,7 @@ export default {
   height: 72px;
   background-color: $blue1;
   margin-left: -16px;
+  padding: 0 18px 0 0;
 }
 
 .linksContainer {

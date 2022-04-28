@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+import { groupById } from '../utils/generalFunctionality/functions'
 
 export const store = createStore({
   state() {
@@ -7,7 +8,10 @@ export const store = createStore({
     }
   },
   getters: {
-    products(state) {
+    categorizedProducts(state) {
+      return groupById("model", state.products)
+    },
+    allProducts(state) {
       return state.products
     }
   },

@@ -15,6 +15,7 @@
 </template>
 <script>
 import ProductCard from "../components/ProductCard.vue";
+import { addProductToCart } from "../store/mutationTypes";
 import { store } from "../store/store"
 
 export default {
@@ -30,7 +31,7 @@ export default {
   },
   methods: {
     addToCart: function (product) {
-    store.commit('addProductToCart', product)
+    store.commit(addProductToCart, product)
     },
   },
   mounted() {

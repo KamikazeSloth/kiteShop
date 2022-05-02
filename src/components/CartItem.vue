@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import { removeProductFromCart } from "../store/mutationTypes";
 import { store } from "../store/store";
 
 export default {
@@ -24,7 +25,7 @@ export default {
   },
   methods: {
     removeFromCart: function () {
-        store.commit('removeProductFromCart', this.index)
+        store.commit(removeProductFromCart, this.index)
     }
   }
 }

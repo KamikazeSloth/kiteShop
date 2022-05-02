@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 import { groupById } from '../utils/generalFunctionality/functions'
+import { addProductToCart, removeProductFromCart } from './mutationTypes'
 
 export const store = createStore({
   state() {
@@ -16,10 +17,10 @@ export const store = createStore({
     }
   },
   mutations: {
-    addProductToCart (state, newProduct) {
+    [addProductToCart] (state, newProduct) {
       state.products.push(newProduct)
     },
-    removeProductFromCart (state, index) {
+    [removeProductFromCart] (state, index) {
       state.products.splice(index, 1)
     }
   }

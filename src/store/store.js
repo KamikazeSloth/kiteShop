@@ -30,7 +30,6 @@ export const store = createStore({
       state.products.push(newProduct)
     },
     [removeProductFromCart] (state, index) {
-      state.products.pop()
       state.categorizedProducts[index].pop()
     }
   }

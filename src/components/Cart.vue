@@ -82,13 +82,12 @@ export default {
   watch: {
     products: {
       handler() {
-        if (this.products.length > 0) {
+        if (this.products > 0) {
           this.checkoutIsEnabled = true;
         } else {
           this.checkoutIsEnabled = false;
         }
-      },
-      deep: true,
+      }
     },
   },
 };

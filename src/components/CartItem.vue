@@ -1,7 +1,7 @@
 
 
 <template>
-  <div class="container label">
+  <div class="container label" v-if="amountPerProduct !== 0">
     <div class="productInfoContainer">
       <span class="productName">{{ product }}</span>
       <span class="paragraph">{{ amountPerProduct }}X</span>
@@ -21,11 +21,12 @@ export default {
   props: {
     product: Object,
     index: Number,
-    amountPerProduct: Number
+    amountPerProduct: Number,
+    categorizedProducts: Object
   },
   methods: {
     removeFromCart: function () {
-        store.commit(removeProductFromCart, this.index)
+        store.commit(removeProductFromCart, this.product)
     }
   }
 }

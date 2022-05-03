@@ -5,8 +5,8 @@
     <button class="icon" @click="showCart">
       <img src="../icons/cart.svg" alt="cart" />
       <div class="cartNumberContainer">
-        <span class="cartNumber label" v-if="this.products.length > 0">
-          {{ this.products.length }}
+        <span class="cartNumber label" v-if="this.products > 0">
+          {{ this.products }}
         </span>
       </div>
     </button>
@@ -16,10 +16,11 @@
         v-for="(productName, index) in Object.keys(categorizedProducts)"
         :key="index"
         :index="index"
+        :categorizedProducts="categorizedProducts"
         :product="productName"
         :amountPerProduct="categorizedProducts[productName].length"
       />
-      <div class="" v-if="this.products.length === 0">
+      <div class="" v-if="this.products === 0">
         Din varukorg är tom
       </div>
       <div class="buttonContainer">
@@ -75,7 +76,6 @@ export default {
       return store.getters.allProducts;
     },
     categorizedProducts() {
-      console.log("hejhej")
       return store.getters.categorizedProducts
     }
   },
